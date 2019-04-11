@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -c tslint.json app/**/*.ts",
     "build": "tsc",
     "start": "npm run build && node ./build/app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "tslint": "^5.15.0",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.4.3"
   },
   "dependencies": {
